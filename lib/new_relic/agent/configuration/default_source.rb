@@ -849,12 +849,12 @@ module NewRelic
           :allowed_from_server => false,
           :description => 'If <code>true</code>, uses Module.prepend rather than alias_method for Net::HTTP instrumentation.'
         },
-        :prepend_http_instrumentation => {
-          :default => true,
+        :'instrumentation.http' => {
+          :default => :prepend,
           :public => true,
-          :type => Boolean,
+          :type => Symbol,
           :allowed_from_server => false,
-          :description => 'If <code>true</code>, uses Module.prepend rather than alias_method for Net::HTTP instrumentation.'
+          :description => ''
         },
         :disable_data_mapper => {
           :default => false,
